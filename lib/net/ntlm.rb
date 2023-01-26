@@ -146,7 +146,7 @@ module Net
         unless opt[:unicode]
           pwd = EncodeUtil.encode_utf16le(pwd)
         end
-        OpenSSL::Digest::MD4.digest pwd
+        OpenSSL::Digest::SHA256.digest pwd
       end
 
       # Generate a NTLMv2 Hash
